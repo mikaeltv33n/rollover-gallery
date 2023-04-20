@@ -1,0 +1,100 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+
+body{
+ background-color:black;
+}
+
+
+.gallery__focusedImage{
+width :600px;
+height: 400px;
+}
+
+
+
+.gallery__thumbnail{
+display: block;
+height :100px;
+width  :100px;
+border-radius: 1em;
+}
+
+
+
+
+.gallery__thumbnail:hover{
+
+    box-shadow: 0 0 0 3px rgb(226, 208, 0), 0 0 0 10px 
+    rgb(254, 254, 132); 
+    
+
+}
+
+.gallery__button {
+margin :1rem;   
+border: none;
+border-radius: 1em;
+
+}
+
+.gallery__zoomedImageContainer{
+    width:300px;
+    height:300px;
+    padding:200px;
+    margin-top: 100px;
+    margin-right: 200px;
+    /*Hvis forældre elementet er position relative 
+    kan vi nemt positionere et absolut positioned child element */
+    position:absolute;
+    top:0;
+    right:0;
+    overflow: hidden; /*VIGTIGT*/
+}
+
+.gallery__zoomedImage{
+    height:300px;
+    width:auto;
+    transform:scale(2)
+    
+}
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    .gallery__focusedImage{
+        height: 400px;
+        width :80%;
+        margin: auto;
+        display: flex;
+       
+        
+    }
+    .gallery__button{
+     height: 80px;
+     width: 80px;
+    
+    }
+    .gallery__thumbnail{
+        height: 80px;
+        width: 80px;
+        
+    }
+    
+    .gallery__thumbnails{
+        display: flex;
+       justify-content:center;
+       
+    }
+    .gallery__zoomedImageContainer, .gallery__zoomedImage{
+        display: none;
+    }
+
+}
